@@ -116,9 +116,11 @@ class ClientDetails extends Component {
                                             ${parseFloat(client.balance).toFixed(2)}
                                         </span>
                                         {' '}
-                                        <a href="#!">
-                                            <i className="fas fa-pencil-alt" onClick={() => this.setState({ showBalanceUpdate: !this.state.showBalanceUpdate })}></i>
-                                        </a>
+                                        <small>
+                                            <a href="#!">
+                                                <i className="fas fa-pencil-alt" onClick={() => this.setState({ showBalanceUpdate: !this.state.showBalanceUpdate })}></i>
+                                            </a>
+                                        </small>
                                         {balanceForm}
                                     </h5>
                                 </div>
@@ -127,8 +129,8 @@ class ClientDetails extends Component {
                             <hr />
 
                             <ul className="list-group">
-                                <li className="list-group-item">Contact Email: {client.email}</li>
-                                <li className="list-group-item">Contact phone: {client.phone}</li>
+                                <li className="list-group-item"><small><b>Contact Email:</b></small> {client.email}</li>
+                                <li className="list-group-item"><small><b>Contact phone:</b></small> {client.phone}</li>
                             </ul>
                         </div>
                     </div>
